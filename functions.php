@@ -295,3 +295,22 @@ remove_action( 'wp_head',                'wp_oembed_add_host_js'                
 
 	*********************************
 */
+
+
+define('LH_PATH',get_template_directory());
+define('LH_FUN', get_template_directory() . '/functions');
+
+/* 
+
+	********************************
+	
+	Add other settings
+
+	- custom post type 
+	- meta box
+	
+	******************************	
+*/
+require_once LH_FUN . '/settings.php';
+
+
