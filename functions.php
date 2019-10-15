@@ -120,15 +120,39 @@ add_action( 'widgets_init', 'luckyhouse_widgets_init' );
  * Enqueue scripts and styles.
  */
 function luckyhouse_scripts() {
+	/* style */
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/styles/main.css', array(), '?ver=1.0');
+
+	/* javascript */
+	// отменяем зарегистрированный jQuery
+	wp_deregister_script('jquery-core');
+	wp_deregister_script('jquery');
+
+	// регистрируем
+	wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true );
+	wp_register_script( 'jquery', false, array('jquery-core'), null, true );
+
+	// подключаем
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script('jquery-easing', get_template_directory_uri() . '/js/lib/jquery-easing/jquery.easing.min.js',array('jquery'), true, true);
+
+	wp_enqueue_script('bootstrap-bundle', get_template_directory_uri() . '/js/lib/bootstrap/bootstrap.bundle.min.js',array('jquery'), true, true);
+
+	wp_enqueue_script('bootstrap-validation', get_template_directory_uri() . '/js/lib/jqBootstrapValidation.js',array('jquery'), true, true);
+
+	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.min.js',array('jquery'), true, true);
+
+
+
 	wp_enqueue_style( 'luckyhouse-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'luckyhouse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'luckyhouse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	//if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	//	wp_enqueue_script( 'comment-reply' );
+	//}
 }
 add_action( 'wp_enqueue_scripts', 'luckyhouse_scripts' );
 
@@ -312,5 +336,29 @@ define('LH_FUN', get_template_directory() . '/functions');
 	******************************	
 */
 require_once LH_FUN . '/settings.php';
+
+
+function show_block($id) {
+	$p = 'lh_'; // prefix
+	$metaD = get_post_meta( get_the_ID(), $p.$id);
+	settype( $metaD[0], 'int');
+	
+	if ( $metaD[0] ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function lh_get_meta_box($id) {
+	$p = 'lh_'; //prefix
+	$meta = get_post_meta( get_the_ID(), $p.$id);
+	
+	if (is_array($meta) && count( $meta) === 1 ) {
+		return $meta[0];
+	}
+	
+
+}
 
 

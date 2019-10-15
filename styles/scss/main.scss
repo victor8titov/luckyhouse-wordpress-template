@@ -1,0 +1,33 @@
+//  Clear style
+//@import "../lib/normalize.css/normalize.scss";
+
+//  Bootstrap
+@import "../lib/bootstrap-4.3.1/scss/bootstrap";
+
+//  fontawesome-free-5.11.2
+@import "../lib/fontawesome-free-5.11.2-web/scss/fontawesome";
+@import "../lib/fontawesome-free-5.11.2-web/scss/regular";
+@import "../lib/fontawesome-free-5.11.2-web/scss/solid";
+@import "../lib/fontawesome-free-5.11.2-web/scss/brands";
+
+
+// Core variables and mixins
+@import "base/variables";
+@import "base/mixins";
+@import "base/fonts";
+
+// Global CSS
+@import "base/page";
+
+// Components
+@import "components/buttons.scss";
+@import "components/navbar.scss";
+
+// Layout
+@import "layout/masthead.scss";
+@import "layout/services.scss";
+@import "layout/portfolio.scss";
+@import "layout/timeline";
+@import "layout/team.scss";
+@import "layout/contact.scss";
+@import "layout/footer.scss";

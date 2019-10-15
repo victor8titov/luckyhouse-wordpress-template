@@ -196,6 +196,25 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'on_label'  => 'Показывать',
                     'off_label' => 'Скрывать',
                 ),
+                array(
+                    'name'        => 'Залоговок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'whyBest_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите загловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Подзаголовок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'whyBest_subtitle',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите подзагловок блока',
+                    'size'        => 100,
+                ),
+                
 
                 /*      --- Group of companies Lucky House ---      */
                 array(
@@ -242,6 +261,23 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 
                 array(
                     'id'        => $prefix . 'references_show',
+                    'name'      => 'Показывать/Скрывать',
+                    //'label_description' => 'Небольшой текст отображается вместе с изображениме на слайде.',
+                    'type'      => 'switch',                
+                    // Стиль: rounded (по умолчанию) или square
+                    'style'     => 'rounded',
+                    'on_label'  => 'Показывать',
+                    'off_label' => 'Скрывать',
+                ),
+                /*      --- Partners ---    */
+                array(
+                    'type' => 'heading',
+                    'name' => 'Блок Partners',
+                    'desc' => 'Настройки блока',
+                ),
+                
+                array(
+                    'id'        => $prefix . 'partners_show',
                     'name'      => 'Показывать/Скрывать',
                     //'label_description' => 'Небольшой текст отображается вместе с изображениме на слайде.',
                     'type'      => 'switch',                
