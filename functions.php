@@ -79,6 +79,7 @@ if ( ! function_exists( 'luckyhouse_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+		
 	}
 endif;
 add_action( 'after_setup_theme', 'luckyhouse_setup' );
@@ -183,7 +184,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
+/* new image size */
+add_image_size('lh_thumbnail', 400, 300, true);
 
 /* 
 	**********************************

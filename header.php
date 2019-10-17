@@ -40,7 +40,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo lh_get_meta_box('main_brand'); ?></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -68,12 +68,12 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
+  <header class="masthead" style="background-image: url(<?php echo wp_get_attachment_image_url( lh_get_meta_box('main_foto'),'full' ); ?>); ">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        <div class="intro-lead-in"><?php echo lh_get_meta_box('main_intro'); ?></div>
+        <div class="intro-heading text-uppercase"><?php echo lh_get_meta_box('main_heading'); ?></div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>        
       </div>
     </div>
   </header>

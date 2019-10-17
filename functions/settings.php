@@ -179,6 +179,52 @@ function prefix_register_meta_boxes( $meta_boxes ) {
             'priority'      => 'high',
             'autosave'      => 'false',
             'fields'        => array(
+                /*  --- Главный экран настройки ---  */
+                array(
+                    'type' => 'heading',
+                    'name' => 'Главный экран настройки',
+                    //'desc' => 'Настройки блока',
+                ),
+                array(
+                    'name'        => 'Бренд в меню',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'main_brand',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите интро главного экрана',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Интро',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'main_intro',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите интро главного экрана',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Главный текст',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'main_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите главный текст экрана',
+                    'size'        => 100,
+                ),
+                /* Картинка главного экрана */
+                array(
+                    'name'             => 'Изображение главного экрана',
+                    'id'               => $prefix .'main_foto',
+                    'type'             => 'image_advanced',
+                
+                    // удалять картинку из медиатеки при удалении из метаполя?
+                    // 'force_delete'     => true,
+                
+                    'max_file_uploads' => 1, // макс. кол-во файлов
+                ),
+
+
                 /*      --- Why we are the best ---      */
                 array(
                     'type' => 'heading',
@@ -233,6 +279,24 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'on_label'  => 'Показывать',
                     'off_label' => 'Скрывать',
                 ),
+                array(
+                    'name'        => 'Залоговок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'groupCompaines_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите загловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Подзаголовок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'groupCompaines_subtitle',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите подзагловок блока',
+                    'size'        => 100,
+                ),
 
                 /*      --- history ---      */
                 array(
@@ -250,6 +314,24 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'style'     => 'rounded',
                     'on_label'  => 'Показывать',
                     'off_label' => 'Скрывать',
+                ),
+                array(
+                    'name'        => 'Залоговок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'history_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите загловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Подзаголовок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'history_subtitle',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите подзагловок блока',
+                    'size'        => 100,
                 ),
 
                 /*      --- Reference ---    */
@@ -275,7 +357,6 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'name' => 'Блок Partners',
                     'desc' => 'Настройки блока',
                 ),
-                
                 array(
                     'id'        => $prefix . 'partners_show',
                     'name'      => 'Показывать/Скрывать',
@@ -286,6 +367,35 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'on_label'  => 'Показывать',
                     'off_label' => 'Скрывать',
                 ),
+                array(
+                    'name'        => 'Залоговок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'partners_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите загловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Подзаголовок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'partners_subtitle',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите подзагловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Описание в подвале блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'partners_text',
+                    'type'        => 'textarea',
+                    // Placeholder
+                    'placeholder' => 'Введите текст блока',
+                    
+                ),
+                
+                
 
                 /*      --- form ---     */
                 array(
@@ -313,7 +423,7 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 array(
                     'name'        => 'Instagram',
                     //'label_description' => 'Instagram',
-                    'id'          => 'instagram',
+                    'id'          =>  $prefix .'instagram',
                     //'desc'        => 'Please enter some text above',
                     'type'        => 'text',
                     // Placeholder
@@ -322,7 +432,7 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 array(
                     'name'        => 'Vkontakte',
                     //'label_description' => 'Instagram',
-                    'id'          => 'vk',
+                    'id'          =>  $prefix .'vk',
                     //'desc'        => 'Please enter some text above',
                     'type'        => 'text',
                     // Placeholder
@@ -331,19 +441,93 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                 array(
                     'name'        => 'Facebook',
                     //'label_description' => 'Instagram',
-                    'id'          => 'facebook',
+                    'id'          =>  $prefix .'facebook',
                     //'desc'        => 'Please enter some text above',
                     'type'        => 'text',
                     // Placeholder
                     'placeholder' => 'Вставьте ссылку',
                 ),
-                
-
-
-                
             ),
+
         );
     }// end if for page-home.php	
+    
+    /* 
+        meta for custom post type GROUP
+     */
+    $meta_boxes[] = array(
+        'id'            => $prefix . 'group_settings',
+        'title'         => ' Настройки для Group of companies',
+        'post_types'    => array( 'group_of_companies' ),
+        'context'       => 'form_top',
+        'priority'      => 'high',
+        'autosave'      => 'false',
+        'fields'        => array(
+            /*      ---  ---      */
+            array(
+                'type' => 'heading',
+                'name' => 'Блок Why we are the best',
+                'desc' => 'Настройки блока',
+            ),
+            array(
+                'name'        => 'Подзаголовок в карточки группы',
+                //'label_description' => 'Instagram',
+                'id'          =>  $prefix .'group_subtitle_card',
+                //'desc'        => 'Please enter some text above',
+                'type'        => 'text',
+                // Placeholder
+                'placeholder' => 'Подзаголовок карточки',
+                'size'        => 50,
+            ),
+            array(
+                'name'        => 'Подзаголовок в основной статьи',
+                //'label_description' => 'Instagram',
+                'id'          =>  $prefix .'group_subtitle_article',
+                //'desc'        => 'Please enter some text above',
+                'type'        => 'text',
+                // Placeholder
+                'placeholder' => 'Подзаголовок полной статьи',
+                'size'        => 50,
+            ),
+        )
+    );
+    /* 
+        meta for custom post type GROUP
+     */
+    $meta_boxes[] = array(
+        'id'            => $prefix . 'history_settings',
+        'title'         => 'History',
+        'post_types'    => array( 'history' ),
+        'context'       => 'form_top',
+        'priority'      => 'high',
+        'autosave'      => 'false',
+        'fields'        => array(
+            /*      ---  ---      */
+            array(
+                'type' => 'heading',
+                'name' => 'Блок History',
+                'desc' => 'Настройки блока',
+            ),
+            array(
+                'name'        => 'Подзагаловок для указания времени события',
+                'id'          =>  $prefix .'history_time',
+                //'desc'        => 'Please enter some text above',
+                'type'        => 'text',
+                // Placeholder
+                'placeholder' => 'Когда произошло событие',
+                'size'        => 50,
+            ),
+            array(
+                'name' => 'Позиция в ленте истории',
+                'id'   => $prefix .'history_position',
+                'type' => 'number',
+            ),
+            
+            
+        )
+    );
+
+
 
     
 
