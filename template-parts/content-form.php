@@ -1,10 +1,10 @@
 <!-- Contact -->
-<section class="page-section" id="contact">
+<section class="page-section" id="<?php echo lh_get_meta_box('form_id'); ?>">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase"><?php echo lh_get_meta_box('form_heading'); ?></h2>
+          <h3 class="section-subheading text-muted"><?php echo lh_get_meta_box('form_subtitle'); ?></h3>
         </div>
       </div>
       <div class="row">

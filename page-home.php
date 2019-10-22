@@ -6,7 +6,6 @@ Template Name: Главная
 */
 
 get_header();
-
 /* 
   Why we are the best
 */
@@ -54,5 +53,6 @@ if ( show_block('partners_show') ) {
 if ( show_block('form_show') ) {
   get_template_part('template-parts/content','form');
 }
+
 
 get_footer();

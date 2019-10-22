@@ -1,6 +1,6 @@
 
 <!-- Services -->
-<section class="page-section" id="services">
+<section class="page-section" id="<?php echo lh_get_meta_box('whyBest_id'); ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -23,8 +23,8 @@
 						<div class="col-md-4">
 
 							<span class="fa-stack fa-4x">
-								<i class="fas fa-circle fa-stack-2x text-primary"></i>
-								<?php echo get_the_post_thumbnail(get_the_ID(),'full',array('class'=>'fa-stack-1x')); ?>
+								<!-- <i class="fas fa-circle fa-stack-2x text-primary"></i> -->
+								<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" class="img-fluid" alt="">								
 								<!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
 							</span>
 							<h4 class="service-heading"><?php the_title(); ?></h4>

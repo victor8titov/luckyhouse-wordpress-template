@@ -1,5 +1,5 @@
 $(function() {
-
+  console.log('---:','dataforForm:',dataForForm)
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
@@ -20,16 +20,19 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: dataForForm.url,
         type: "POST",
         data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
+			action: 'mail_send',
+          	name: name,
+          	phone: phone,
+			email: email,
+			to: dataForForm.emailTo,
+          	message: message
         },
         cache: false,
-        success: function() {
+        success: function(data) {
+          console.log('---:','success:',data)
           // Success message
           $('#success').html("<div class='alert alert-success'>");
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -41,7 +44,8 @@ $(function() {
           //clear all fields
           $('#contactForm').trigger("reset");
         },
-        error: function() {
+        error: function(xhr, status,error) {
+          console.log('---:','error','data:',xhr,status,error)
           // Fail message
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")

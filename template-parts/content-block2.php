@@ -1,6 +1,6 @@
 <!-- Portfolio Grid -->
 <!-- Group of companies  -->
-<section class="bg-light page-section" id="portfolio">
+<section class="bg-light page-section" id="<?php echo lh_get_meta_box('groupCompaines_id'); ?>">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">

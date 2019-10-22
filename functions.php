@@ -45,6 +45,7 @@ if ( ! function_exists( 'luckyhouse_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'luckyhouse' ),
+			'custom_header_menu' => "Меню на главном развороте",
 		) );
 
 		/*
@@ -141,7 +142,9 @@ function luckyhouse_scripts() {
 
 	wp_enqueue_script('bootstrap-validation', get_template_directory_uri() . '/js/lib/jqBootstrapValidation.js',array('jquery'), true, true);
 
-	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.min.js',array('jquery'), true, true);
+	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js',array('jquery'), true, true);
+
+	wp_enqueue_script('contact-me', get_template_directory_uri() . '/js/contact_me.js',array('jquery'), true, true);
 
 
 
@@ -324,7 +327,7 @@ remove_action( 'wp_head',                'wp_oembed_add_host_js'                
 
 
 define('LH_PATH',get_template_directory());
-define('LH_FUN', get_template_directory() . '/functions');
+define('LH_INC', get_template_directory() . '/inc');
 
 /* 
 
@@ -337,7 +340,7 @@ define('LH_FUN', get_template_directory() . '/functions');
 	
 	******************************	
 */
-require_once LH_FUN . '/settings.php';
+require_once LH_INC . '/settings.php';
 
 
 function show_block($id) {
@@ -363,4 +366,35 @@ function lh_get_meta_box($id) {
 
 }
 
+/* 
 
+	********************************
+	
+	Form script
+
+	
+	******************************	
+*/
+require_once LH_INC . '/form.php';
+
+
+/* 
+	****************************
+
+	Сохранение в константу id главной странци
+
+	****************************
+*/
+$ids = get_all_page_ids();
+foreach ( $ids as $value) {
+	if (get_page_template_slug( $value ) === "page-home.php") {
+		define("LH_ID_MAIN_PAGE", $value);				
+		break;
+	}
+}
+
+/* 
+	custom menu
+*/
+
+require_once LH_INC . '/custom-menu.php';
