@@ -23,7 +23,7 @@
 					<?php echo get_the_post_thumbnail(get_the_ID(), 'full',array('class'=>'mx-auto rounded-circle')); ?>
 					<h4><?php the_title(); ?></h4>
 					<p class="text-muted"><?php echo lh_get_meta_box('references_subtitle'); ?></p>
-					<ul class="list-inline social-buttons">
+					<!-- <ul class="list-inline social-buttons">
 					<li class="list-inline-item">
 						<a href="#">
 						<i class="fab fa-twitter"></i>
@@ -39,7 +39,7 @@
 						<i class="fab fa-linkedin-in"></i>
 						</a>
 					</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		<?php 

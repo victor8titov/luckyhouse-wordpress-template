@@ -45,7 +45,6 @@
 			) );
 ?>
 </nav>
-
 <?php /*
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -91,28 +90,33 @@
 <header class="masthead" style="background-image: url(<?php echo wp_get_attachment_image_url( lh_get_meta_box('main_foto'),'full' ); ?>); ">
 <div class="container">
 	<div class="intro-text">
-	<div class="intro-lead-in"><?php echo lh_get_meta_box('main_intro'); ?></div>
+  <div class="intro-lead-in"><?php echo lh_get_meta_box('main_intro'); ?></div>
+  <div class="intro-brand"><?php  
+  echo wp_get_attachment_image( lh_get_meta_box('main_brand_foto'), 'full', false,array('class'=>'img-fluid')); ?></div>
 	<div class="intro-heading text-uppercase"><?php echo lh_get_meta_box('main_heading'); ?></div>
-	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>        
+	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#<?php echo lh_get_meta_box('whyBest_id'); ?>">Tell Me More</a>        
 	</div>
 </div>
 </header>
 
+<?php if ( lh_get_meta_box('main_text_show') ) : ?>
 <section class="page-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-		  <?php 
-		  	if( have_posts() ): 
+      <?php 
+        if (have_posts() ):
 				while( have_posts() ): 
 					/* body loop */
 				the_post(); ?>
             	<?php the_content(); ?>
 			<?php endwhile; /* конец while */ ?>
-			<?php endif; ?>
+      <?php endif; ?>
           </div>
         </div>
       </div>  
 </section>
+        <?php endif; ?>
+
 
 

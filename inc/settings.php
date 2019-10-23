@@ -223,6 +223,17 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'placeholder' => 'Введите интро главного экрана',
                     'size'        => 100,
                 ),
+                /* Картинка главного экрана */
+                array(
+                    'name'             => 'Брендинг',
+                    'id'               => $prefix .'main_brand_foto',
+                    'type'             => 'image_advanced',
+                
+                    // удалять картинку из медиатеки при удалении из метаполя?
+                    // 'force_delete'     => true,
+                
+                    'max_file_uploads' => 1, // макс. кол-во файлов
+                ),
                 array(
                     'name'        => 'Главный текст',
                     //'label_description' => 'Label description',
@@ -542,6 +553,23 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'type'        => 'text',
                     // Placeholder
                     'placeholder' => 'Вставьте ссылку',
+                ),
+
+                 /*      --- main text ---     */
+                 array(
+                    'type' => 'heading',
+                    'name' => 'Настройка вывода основного текста',
+                    //'desc' => 'Настройки блока',
+                ),
+                array(
+                    'id'        => $prefix . 'main_text_show',
+                    'name'      => 'Показывать/Скрывать',
+                    //'label_description' => 'Небольшой текст отображается вместе с изображениме на слайде.',
+                    'type'      => 'switch',                
+                    // Стиль: rounded (по умолчанию) или square
+                    'style'     => 'rounded',
+                    'on_label'  => 'Показывать',
+                    'off_label' => 'Скрывать',
                 ),
                 
             ),

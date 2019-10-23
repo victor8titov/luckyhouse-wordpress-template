@@ -40,11 +40,21 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
+        font-size: 52px;
+        font-weight: 500;
+        line-height: 65px;
+        margin-top: 50px;
         margin-bottom: 50px;
+
+        border-top: 2px solid white;
         @include heading-font;
+      }
+      .intro-brand {
+        text-align: center;
+        img {
+          max-width: 80%;
+          
+        }
       }
     }
   }
