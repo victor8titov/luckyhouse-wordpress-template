@@ -1,5 +1,14 @@
 // Styling for the services section
-.block-cards-heading {
-  margin: 15px 0;
-  text-transform: none;
+.block-cards {
+  .block-cards-item {
+    ol,ul {
+      text-align: left;
+      padding-left: 30px;
+    }
+  }
+  .block-cards-heading {
+    margin: 15px 0;
+    text-transform: none;
+  }
 }
+

@@ -466,6 +466,21 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     // Placeholder
                     'placeholder' => 'id для создания ссылки в меню',
                 ),
+                array(
+                    'id'               => $prefix . 'partners_images',
+                    'name'             => 'Фото брендов партнеров',
+                    'type'             => 'image_advanced',
+                
+                       // удалять картинку из медиатеки при удалении из метаполя?
+                    // 'force_delete'     => true,
+                
+                    //'max_file_uploads' => 2, // макс. кол-во картинок для загрузки
+                
+                    // 'max_status'       => false, // показать сколько загружено
+                
+                    // 'image_size'       => 'thumbnail', // размер отображаемый для редактирования
+                ),
+                
                 
                 
 

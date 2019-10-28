@@ -26,13 +26,19 @@
 				$query->the_post();
 				++$interation;
               ?>
-            <li class="<?php echo $interation%2 === 0 ? "timeline-inverted": ""; ?>">
+			<li class="<?php echo $interation%2 === 0 ? "timeline-inverted": ""; ?>">
+			<?php if ( has_post_thumbnail( get_the_ID() ) ): ?>
               <div class="timeline-image">
 				<?php echo get_the_post_thumbnail(get_the_ID(),'lh_thumbnail',array('class'=>'rounded-circle img-fluid')); ?> 
-              </div>
+			  </div>
+			  <?php else: ?>
+			  <div class="timeline-year">
+			  <h4><?php echo lh_get_meta_box('history_time'); ?></h4>
+			  </div>
+			  <?php endif; ?>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h4><?php echo lh_get_meta_box('history_time'); ?></h4>
+                  <h4><?php if ( has_post_thumbnail( get_the_ID() ) ) echo lh_get_meta_box('history_time'); ?></h4>
                   <h4 class="subheading"><?php the_title(); ?></h4>
                 </div>
                 <div class="timeline-body">

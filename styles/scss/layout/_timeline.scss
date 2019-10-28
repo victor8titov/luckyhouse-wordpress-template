@@ -44,7 +44,7 @@
         border-left-width: 0;
       }
     }
-    .timeline-image {
+    .timeline-image, .timeline-year {
       position: absolute;
       z-index: 100;
       left: 0;
@@ -52,6 +52,8 @@
       height: 80px;
       margin-left: 0;
       text-align: center;
+    }
+    .timeline-image {
       color: white;
       border: 7px solid $gray-200;
       border-radius: 100%;
@@ -60,6 +62,15 @@
         font-size: 10px;
         line-height: 14px;
         margin-top: 12px;
+      }
+    }
+    .timeline-year {
+      background-color: #fff;
+      height: auto;
+      h4 {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin: 12px auto;
       }
     }
     &.timeline-inverted > .timeline-panel {
@@ -124,6 +135,16 @@
           margin-top: 16px;
         }
       }
+      .timeline-year {
+        left: 50%;
+        width: 100px;
+        margin-left: -50px;
+        h4 {
+          font-size: 1.5rem;
+          line-height: 26px;
+          margin: 16px auto;
+        }
+      }
       &.timeline-inverted > .timeline-panel {
         float: right;
         padding: 0 30px 20px 20px;
@@ -149,6 +170,13 @@
           margin-top: 30px;
         }
       }
+      .timeline-year {
+        width: 150px;
+        margin-left: -75px;
+        h4 {
+          margin: 30px auto;
+        }
+      }
       &.timeline-inverted > .timeline-panel {
         padding: 0 20px 20px;
       }
@@ -168,6 +196,13 @@
         margin-left: -85px;
         h4 {
           margin-top: 40px;
+        }
+      }
+      .timeline-year {
+        width: 170px;
+        margin-left: -85px;
+        h4 {
+          margin: 30px auto;
         }
       }
       &.timeline-inverted > .timeline-panel {

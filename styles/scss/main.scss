@@ -3,6 +3,8 @@
 
 //  Bootstrap
 @import "../lib/bootstrap-4.3.1/scss/bootstrap";
+@import "../lib/slick/slick-theme.scss";
+@import "../lib/slick/slick.scss";
 
 //  fontawesome-free-5.11.2
 @import "../lib/fontawesome-free-5.11.2-web/scss/fontawesome";
@@ -26,10 +28,9 @@
 // Layout
 @import "layout/masthead.scss";
 @import "layout/block-cards.scss";
-
-@import "layout/block-cards_more_info.scss";
-
+@import "layout/block-cards_more_info";
 @import "layout/timeline";
+@import "layout/block-slide-brand";
 @import "layout/team.scss";
 @import "layout/contact.scss";
 @import "layout/footer.scss";

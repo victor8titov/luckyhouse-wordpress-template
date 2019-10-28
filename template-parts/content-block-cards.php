@@ -20,10 +20,10 @@
 					while( $query->have_posts() ){
 						$query->the_post();
 						?>
-						<div class="col-md-3">
-							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'large'); ?>" class="img-fluid" alt="">
-								<h4 class="block-cards-heading"><?php the_title(); ?></h4>
-							<p class="text-muted"><?php the_content(); ?></p>
+						<div class="col-md-3 mb-4 mb-md-0 block-cards-item">
+							<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'large'); ?>" class="img-fluid w-25" alt="">
+							<h4 class="block-cards-heading"><?php the_title(); ?></h4>
+							<?php the_content(); ?>
 						</div>						
 						<?php
 					}

@@ -142,6 +142,8 @@ function luckyhouse_scripts() {
 
 	wp_enqueue_script('bootstrap-validation', get_template_directory_uri() . '/js/lib/jqBootstrapValidation.js',array('jquery'), true, true);
 
+	wp_enqueue_script('slick', get_template_directory_uri() . '/js/lib/slick/slick.js',array('jquery'), true, true);
+
 	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js',array('jquery'), true, true);
 
 	wp_enqueue_script('contact-me', get_template_directory_uri() . '/js/contact_me.js',array('jquery'), true, true);
@@ -361,6 +363,8 @@ function lh_get_meta_box($id) {
 	
 	if (is_array($meta) && count( $meta) === 1 ) {
 		return $meta[0];
+	} elseif (is_array($meta) && count($meta) >1) {
+		return $meta;
 	}
 	
 

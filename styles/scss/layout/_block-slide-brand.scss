@@ -1,0 +1,22 @@
+.block-slide-brand {
+    .slider-brand {
+        .item {
+           // min-height: 100vh;
+           //max-width: 100%;
+           .icon {
+                width: 100%;
+                height: 100px;
+
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center center;
+                background-size: contain;
+           }
+            
+        }
+        .slick-arrow:before {
+            color: black;
+        }
+
+    }
+}
