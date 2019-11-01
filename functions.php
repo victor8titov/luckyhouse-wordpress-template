@@ -123,7 +123,7 @@ add_action( 'widgets_init', 'luckyhouse_widgets_init' );
  */
 function luckyhouse_scripts() {
 	/* style */
-	wp_enqueue_style('main-style', get_template_directory_uri() . '/styles/main.css', array(), '?ver=1.0');
+	wp_enqueue_style('main-style', get_template_directory_uri() . '/styles/main.min.css', array(), '?ver=1.0');
 
 	/* javascript */
 	// отменяем зарегистрированный jQuery
@@ -142,23 +142,17 @@ function luckyhouse_scripts() {
 
 	wp_enqueue_script('bootstrap-validation', get_template_directory_uri() . '/js/lib/jqBootstrapValidation.js',array('jquery'), true, true);
 
-	wp_enqueue_script('slick', get_template_directory_uri() . '/js/lib/slick/slick.js',array('jquery'), true, true);
+	wp_enqueue_script('slick', get_template_directory_uri() . '/js/lib/slick/slick.min.js',array('jquery'), true, true);
 
-	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js',array('jquery'), true, true);
-
-	wp_enqueue_script('contact-me', get_template_directory_uri() . '/js/contact_me.js',array('jquery'), true, true);
+	wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.min.js',array('jquery'), true, true);
+ 
+	wp_enqueue_script('contact-me', get_template_directory_uri() . '/js/contact_me.min.js',array('jquery'), true, true); 
 
 
 
 	wp_enqueue_style( 'luckyhouse-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'luckyhouse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'luckyhouse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	//if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	//	wp_enqueue_script( 'comment-reply' );
-	//}
+	
 }
 add_action( 'wp_enqueue_scripts', 'luckyhouse_scripts' );
 

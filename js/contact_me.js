@@ -1,5 +1,5 @@
 $(function() {
-  console.log('---:','dataforForm:',dataForForm)
+  
   $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
@@ -32,7 +32,6 @@ $(function() {
         },
         cache: false,
         success: function(data) {
-          console.log('---:','success:',data)
           // Success message
           $('#success').html("<div class='alert alert-success'>");
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -45,7 +44,6 @@ $(function() {
           $('#contactForm').trigger("reset");
         },
         error: function(xhr, status,error) {
-          console.log('---:','error','data:',xhr,status,error)
           // Fail message
           $('#success').html("<div class='alert alert-danger'>");
           $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
