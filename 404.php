@@ -8,53 +8,52 @@
  */
 
 get_header();
-?>
+* 
+  Why we are the best
+*/
+if ( show_block('whyBest_show') ) {
+  get_template_part('template-parts/content','block-cards');
+}
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+/* 
+  block 2
+  Group of companies 
+*/
+if ( show_block('groupCompaines_show') ) {
+  get_template_part('template-parts/content','block-cards-more');
+}
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'luckyhouse' ); ?></h1>
-				</header><!-- .page-header -->
+/* 
+  block 3
+  History
+*/
+if ( show_block('history_show') ) {
+  get_template_part('template-parts/content','timeline');
+}
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'luckyhouse' ); ?></p>
+/* 
+  block 4
+  References
 
-					<?php
-					get_search_form();
+*/
+if ( show_block('references_show') ) {
+  get_template_part('template-parts/content','cards-team');
+}
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+/* 
+  block 5
+  partners
+*/
+if ( show_block('partners_show') ) {
+  get_template_part('template-parts/content','slide-brand');
+}
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'luckyhouse' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
+/* 
+  block 6
+  form
+*/
+if ( show_block('form_show') ) {
+  get_template_part('template-parts/content','form');
+}
 
-					<?php
-					/* translators: %1$s: smiley */
-					$luckyhouse_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'luckyhouse' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$luckyhouse_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
 get_footer();

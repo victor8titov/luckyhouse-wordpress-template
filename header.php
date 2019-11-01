@@ -48,47 +48,7 @@
 			) );
 ?>
 </nav>
-<?php /*
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo lh_get_meta_box('main_brand'); ?></a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <?php if ( show_block('whyBest_show') ): ?>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
-          <?php endif; ?>
-         <?php if ( show_block('groupCompaines_show') ): ?>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li>
-          <?php endif; ?>
-          <?php if ( show_block('history_show') ): ?>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <?php endif; ?>
-          <?php if ( show_block('references_show') ): ?>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-          <?php endif; ?>
-          <?php if ( show_block('form_show') ): ?>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-          <?php endif; ?>
-        </ul>
-      </div>
-    </div>
-  </nav>
-*/ ?>
+
 <!-- Header -->
 <header class="masthead" style="background-image: url(<?php echo wp_get_attachment_image_url( lh_get_meta_box('main_foto'),'full' ); ?>); ">
 <div class="container">
