@@ -1,6 +1,12 @@
  <!-- Clients -->
-<section class="block-slide-brand py-5">
+<section class="block-slide-brand py-5 page-section ">
 	<div class="container">
+  <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase"><?php echo lh_get_meta_box('partners_heading'); ?></h2>
+        <h3 class="section-subheading text-muted"><?php echo lh_get_meta_box('partners_subtitle'); ?></h3>
+      </div>
+    </div>
 		<div class="row">
 			<div class="col-12">
 				<div class="slider-brand">

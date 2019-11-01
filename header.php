@@ -25,7 +25,10 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo lh_get_meta_box('main_brand'); ?></a>
+      <?php if ( lh_get_meta_box('main_brand') ): ?>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <?php echo wp_get_attachment_image( lh_get_meta_box('main_brand'), 'medium', false,array('class'=>'img-fluid')); ?></a>
+      <?php endif; ?>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>

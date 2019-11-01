@@ -10534,14 +10534,23 @@ img::-moz-selection {
         font-size: 1.25em;
         padding: 12px 0; } }
 
+.navbar .navbar-brand {
+  display: inline-block;
+  width: 40%; }
+
+@media (min-width: 768px) {
+  .navbar .navbar-brand {
+    width: 20%; } }
+
 header.masthead {
   text-align: center;
   color: white;
   background-color: #3c3837;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
-  background-size: cover; }
+  background-position: 10% center;
+  background-size: cover;
+  margin-top: 50px; }
   header.masthead .intro-text {
     padding-top: 150px;
     padding-bottom: 100px; }
@@ -10580,6 +10589,10 @@ header.masthead {
       text-align: center; }
       header.masthead .intro-text .intro-brand img {
         max-width: 80%; } }
+
+@media (min-width: 992px) {
+  header.masthead {
+    margin-top: 0px; } }
 
 .block-cards .block-cards-item ol, .block-cards .block-cards-item ul {
   text-align: left;

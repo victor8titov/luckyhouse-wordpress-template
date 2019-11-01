@@ -209,10 +209,12 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'name'        => 'Бренд в меню',
                     //'label_description' => 'Label description',
                     'id'          => $prefix . 'main_brand',
-                    'type'        => 'text',
-                    // Placeholder
-                    'placeholder' => 'Введите интро главного экрана',
-                    'size'        => 100,
+                    'type'             => 'image_advanced',
+                
+                    // удалять картинку из медиатеки при удалении из метаполя?
+                    // 'force_delete'     => true,
+                
+                    'max_file_uploads' => 1, // макс. кол-во файлов
                 ),
                 array(
                     'name'        => 'Интро',
@@ -457,6 +459,24 @@ function prefix_register_meta_boxes( $meta_boxes ) {
                     'style'     => 'rounded',
                     'on_label'  => 'Показывать',
                     'off_label' => 'Скрывать',
+                ),
+                array(
+                    'name'        => 'Залоговок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'partners_heading',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите загловок блока',
+                    'size'        => 100,
+                ),
+                array(
+                    'name'        => 'Подзаголовок блока',
+                    //'label_description' => 'Label description',
+                    'id'          => $prefix . 'partners_subtitle',
+                    'type'        => 'text',
+                    // Placeholder
+                    'placeholder' => 'Введите подзагловок блока',
+                    'size'        => 100,
                 ),
                 array(
                     'name'        => 'id ',
