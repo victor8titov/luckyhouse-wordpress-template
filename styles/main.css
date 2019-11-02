@@ -10889,9 +10889,46 @@ header.masthead {
 .team-member {
   margin-bottom: 50px;
   text-align: center; }
-  .team-member img {
+  .team-member .team-link {
+    position: relative;
+    display: block;
     width: 225px;
     height: 225px;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer; }
+    .team-member .team-link .team-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background: rgba(254, 209, 54, 0.9); }
+      .team-member .team-link .team-hover:hover {
+        opacity: 1; }
+      .team-member .team-link .team-hover .team-hover-content {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        margin-top: -12px;
+        text-align: center;
+        color: white; }
+        .team-member .team-link .team-hover .team-hover-content i {
+          margin-top: -12px; }
+        .team-member .team-link .team-hover .team-hover-content h3,
+        .team-member .team-link .team-hover .team-hover-content h4 {
+          margin: 0; }
+  .team-member .no-link {
+    width: 225px;
+    height: 225px;
+    margin: 0 auto; }
+  .team-member img {
+    width: 100%;
+    height: 100%;
     border: 7px solid rgba(0, 0, 0, 0.1); }
   .team-member h4 {
     margin-top: 25px;
