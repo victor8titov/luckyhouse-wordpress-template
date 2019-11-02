@@ -2,9 +2,57 @@
 .team-member {
   margin-bottom: 50px;
   text-align: center;
-  img {
+
+  .team-link {
+    position: relative;
+    display: block;
     width: 225px;
     height: 225px;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+
+    .team-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background: fade-out($primary_, .1);
+
+      
+      &:hover {
+        opacity: 1;
+      }
+      .team-hover-content {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        margin-top: -12px;
+        text-align: center;
+        color: white;
+        i {
+          margin-top: -12px;
+        }
+        h3,
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .no-link {
+    width: 225px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  img {
+    width:100%;
+    height: 100%;
     border: 7px solid fade-out($black, 0.9);
   }
   h4 {
