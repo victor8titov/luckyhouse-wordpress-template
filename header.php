@@ -55,10 +55,11 @@
         'walker'        => new lh_walker_nav_menu
 			) );
 ?>
+</div>
 </nav>
 
 <!-- Header -->
-<header class="masthead" style="background-image: url(<?php echo wp_get_attachment_image_url( lh_get_meta_box('main_foto'),'full' ); ?>); ">
+<header class="masthead" style="background-image: url('<?php echo wp_get_attachment_image_url( lh_get_meta_box('main_foto'),'full' ); ?>'); ">
 <div class="container">
 	<div class="intro-text">
   <div class="intro-lead-in"><?php echo lh_get_meta_box('main_intro'); ?></div>
