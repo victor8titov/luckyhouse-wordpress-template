@@ -14,8 +14,16 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Lucky House"/>
+  <meta property="og:description" content="Our mission: to prolong youth, keep health and beauty of people"/>
+  <meta property="og:image" content="<?php echo get_theme_root_uri().'/luckyhouse/brand.jpg'; ?>">    
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="900" />
+  
+  <meta property="og:url" content= "<?php echo home_url(); ?>" />
+  
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 	<?php wp_head(); ?>
 </head>
