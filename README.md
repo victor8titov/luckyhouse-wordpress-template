@@ -7,17 +7,10 @@
         В связи с тем что данная страница является шаблонам. Некоторые ссылки могут не работать.
 ## Стек технологий примененный при разработке шаблона
 *   [ECMAScript 5](http://es5.github.io/)
-*   [jQuery](https://jquery-docs.ru/)
 *   [Bootstrap 4](https://bootstrap-4.ru)
 *   [slider Slick](https://kenwheeler.github.io/slick/)
-*   [framework animatedScroll](https://github.com/victor8titov/jquery.animateScroll)
-*   [Less](https://less-lang.info/)
 *   [Sass](https://sass-scss.ru/guide/)
-*   [Masonry](https://masonry.desandro.com/)
-*   [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial)
 *   [Wordpress](https://ru.wordpress.org/)
-*   [Flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid)
-*   [flexbox-grid-less](https://github.com/victor8titov/flexbox-grid-less)
 *   [fancybox](http://fancyapps.com/fancybox/3/)
 
 ##  Тесты    
